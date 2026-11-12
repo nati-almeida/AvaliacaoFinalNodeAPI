@@ -26,10 +26,9 @@ class ControllerCliente {
     async Criar(req, res) {
         try {
             const nome = req.body.nome
-            const idade = req.body.idade
             const email = req.body.email
             const senha = req.body.senha
-            await ServiceCliente.Criar(nome, nome, email, senha)
+            await ServiceCliente.Criar(nome, email, senha)
 
             res.send({ message: "Criado com sucesso!" })
         } catch (error) {
@@ -43,7 +42,7 @@ class ControllerCliente {
             const nome = req.body.nome
             const email = req.body.email
             const senha = req.body.senha
-            await ServicePessoa.Alterar(id, nome, email, senha)
+            await ServiceCliente.Alterar(id, nome, email, senha)
 
             res.send({ message: "Alterado com sucesso!" })
         } catch (error) {

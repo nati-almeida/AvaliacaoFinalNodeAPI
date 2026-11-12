@@ -1,11 +1,13 @@
 import express from 'express'
 import router from './src/router/cliente.js'
-import database from './src/config/database.js';
+import routera from './src/router/atendimento.js'
+import database from './src/Config/database.js';
 
 const app = express();
 app.use(express.json())
 
-app.use("/api", router)
+app.use("/api/cliente", router)
+app.use("/api/atendimento", routera)
 
 
 database.db

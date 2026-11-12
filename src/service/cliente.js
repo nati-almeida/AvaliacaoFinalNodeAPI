@@ -11,7 +11,7 @@ class ServiceCliente {
             throw new Error("Favor informar somente números")
         }
 
-        return Cliente.BuscarUm(id)
+        return Cliente.findByPk(id)
     }
 
     async Criar(nome, email, senha) {
@@ -52,4 +52,4 @@ class ServiceCliente {
     
 }
 
-export default new ServiceFilmes()
+export default new ServiceCliente()

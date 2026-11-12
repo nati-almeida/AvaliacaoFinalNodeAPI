@@ -1,7 +1,7 @@
-import database from "../config/database.js";
+import database from "../Config/database.js";
 
 
-class Pessoa {
+class Cliente {
     constructor() {
         this.model = database.db.define("cliente", {
             id: {
